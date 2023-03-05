@@ -1,43 +1,52 @@
 body{
-    
+    max-height: 100vh; 
+    display: grid;
+    grid-template-columns: 1fr 4fr;
 }
 
+h1, aside, footer{
+    text-align: center;
+}
+
+/* List of notes in the sidebar */
+ul.notes{
+    list-style-position: inside;
+    text-align:left;  
+}
+
+/* header nav list items */
 nav li{
     list-style: none;
 }
 
-div.top{
-    display: flex;
-    justify-content: space-between;
-}
-
-nav.top, div.bottom{
+/* header nav links, save and cancel buttons */
+ul.top, div.bottom{
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 10 px;
+    gap: 0.5rem;
 }
 
 textarea{
-    margin: 20px 0px;
+    margin: 1.5em 0;
     box-sizing: border-box;
-    max-width: 100%;
+    width: 95%;
+    max-width: 90vw;
 }
 
-img {
-    display: block;
+/* New Note and Dark Theme Buttons */
+div.top{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
-h1, footer{
-    text-align:center;
+/* Bottom Navigation Bar */
+nav.bottom{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
-main {
-    display: grid;
-    grid-template-columns: 20vw 4fr;
+@media screen and (min-width: 700px){
+
 }
