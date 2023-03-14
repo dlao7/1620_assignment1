@@ -1,7 +1,12 @@
-body{
-    max-height: 100vh; 
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+/* Reset margin and padding on top and bottom to remove scrollbar */
+body {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, aside, footer{
@@ -11,7 +16,18 @@ h1, aside, footer{
 /* List of notes in the sidebar */
 ul.notes{
     list-style-position: inside;
-    text-align:left;  
+    text-align: center;
+    padding-right: 10vw;
+}
+
+main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    flex: 1 0 auto;
 }
 
 /* header nav list items */
@@ -27,10 +43,10 @@ ul.top, div.bottom{
 }
 
 textarea{
-    margin: 1.5em 0;
+    margin: 1em 0;
+    padding: 1em;
     box-sizing: border-box;
-    width: 95%;
-    max-width: 90vw;
+    max-width: 100%;
 }
 
 /* New Note and Dark Theme Buttons */
@@ -47,6 +63,19 @@ nav.bottom{
     gap: 0.5rem;
 }
 
-@media screen and (min-width: 700px){
+footer {
+   flex-shrink: 0;
+}
 
+
+@media screen and (min-width: 700px){
+    body{
+        display: grid;
+        grid-template-columns: 20vw minmax(0,1fr);
+    }
+    
+    ul.notes{
+        text-align: left;
+        padding-right: 0;  
+    }
 }
