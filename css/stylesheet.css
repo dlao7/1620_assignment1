@@ -1,16 +1,24 @@
 /* Reset margin and padding on top and bottom to remove scrollbar */
-body {
+html, body{
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+}
+
+body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #F3E9DE;
+    color: #375F68;
 }
 
 h1, aside, footer{
     text-align: center;
+}
+
+aside {
+    background-color: #FAF4EC;
+    margin:0 0 0 -0.5rem;
 }
 
 /* List of notes in the sidebar */
@@ -21,6 +29,7 @@ ul.notes{
 }
 
 main {
+    background-color: #F3E9DE;
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
@@ -42,9 +51,27 @@ ul.top, div.bottom{
     gap: 0.5rem;
 }
 
+button{
+    color: #FFF;
+    border-radius: 6px;
+    padding: 0.6rem;
+}
+
+button.teal{
+    background-color: #375F68;
+}
+
+button.navy{
+    background-color: #56536A;
+}
+
+button.red{
+    background-color: #9B332C;
+}
+
 textarea{
-    margin: 1em 0;
-    padding: 1em;
+    margin: 1rem 0;
+    padding: 1rem;
     box-sizing: border-box;
     max-width: 100%;
 }
@@ -72,10 +99,12 @@ footer {
     body{
         display: grid;
         grid-template-columns: 20vw minmax(0,1fr);
+        gap: 1%;
     }
-    
+   
     ul.notes{
         text-align: left;
         padding-right: 0;  
     }
 }
+        
